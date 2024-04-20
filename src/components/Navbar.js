@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export default function Navbar() {
+export default function Navbar(prop) {
   return (
     <div><nav className="navbar navbar-expand-lg navbar-light bg-light"> {/* Use appropriate Bootstrap classes */}
     <div className="container-fluid">
-      <a className="navbar-brand" href="/">Text Utils</a>
+      <a className="navbar-brand" href="/">{prop.title}</a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -19,7 +20,7 @@ export default function Navbar() {
          
         </ul>
         <button type="button" class="btn btn-primary">
-Notifications <span class="badge text-bg-secondary">0</span>
+Notifications <span class="badge text-bg-secondary">{prop.not}</span>
 </button>
         <form className="d-flex" onSubmit={(e) => e.preventDefault()}> {/* Use onSubmit to handle form submission */}
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
@@ -30,4 +31,14 @@ Notifications <span class="badge text-bg-secondary">0</span>
   </nav>
   </div>
   )
+}
+
+Navbar.propTypes = {
+    title: PropTypes.string.isRequired,
+    not: PropTypes.number
+}
+
+Navbar.defaultProps={
+    title: "Set Title Please",
+    not: 0
 }
