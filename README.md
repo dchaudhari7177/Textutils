@@ -1,29 +1,4 @@
 
-### Feature: Estimated Reading Time
-
-The Textutils application now includes a feature that estimates the time needed to read the entered paragraph based on average adult reading speed.
-
-#### Implementation Details
-
-1. **Calculation Formula**: The estimated reading time is calculated using the formula:
-   \[ \text{Reading Time (in minutes)} = \frac{\text{Number of words}}{\text{Words per minute (WPM)}} \]
-
-   Where:
-   - **Number of words**: Count of words in the entered text.
-   - **Words per minute (WPM)**: Typical average reading speed for adults. A common value is around 200 WPM.
-
-2. **Display**: The estimated reading time is displayed alongside the text statistics in the application.
-
-#### Usage
-
-- After entering or pasting text into the textarea, observe the estimated reading time displayed below the text statistics.
-
-### Updated README
-
-Below is the updated README file including the new Estimated Reading Time feature:
-
----
-
 # Textutils
 
 Textutils is a simple React.js application that allows users to manipulate text entered into a textarea. It provides functionality to convert text to uppercase, lowercase, and to clear the textarea. Additionally, the application displays the number of words, characters, a live preview of the text, and estimates the reading time for the entered paragraph.
