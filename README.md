@@ -1,70 +1,96 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Feature: Estimated Reading Time
 
-## Available Scripts
+The Textutils application now includes a feature that estimates the time needed to read the entered paragraph based on average adult reading speed.
 
-In the project directory, you can run:
+#### Implementation Details
 
-### `npm start`
+1. **Calculation Formula**: The estimated reading time is calculated using the formula:
+   \[ \text{Reading Time (in minutes)} = \frac{\text{Number of words}}{\text{Words per minute (WPM)}} \]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   Where:
+   - **Number of words**: Count of words in the entered text.
+   - **Words per minute (WPM)**: Typical average reading speed for adults. A common value is around 200 WPM.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Display**: The estimated reading time is displayed alongside the text statistics in the application.
 
-### `npm test`
+#### Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- After entering or pasting text into the textarea, observe the estimated reading time displayed below the text statistics.
 
-### `npm run build`
+### Updated README
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Below is the updated README file including the new Estimated Reading Time feature:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Textutils
 
-### `npm run eject`
+Textutils is a simple React.js application that allows users to manipulate text entered into a textarea. It provides functionality to convert text to uppercase, lowercase, and to clear the textarea. Additionally, the application displays the number of words, characters, a live preview of the text, and estimates the reading time for the entered paragraph.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Text Transformation**: Convert entered text to uppercase or lowercase.
+- **Clear Text**: Clear the textarea to start fresh.
+- **Text Statistics**: Display the number of words and characters in the entered text.
+- **Live Text Preview**: Show a live preview of the entered text.
+- **Estimated Reading Time**: Estimate the time needed to read the entered text based on average adult reading speed.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Input Text**: Enter or paste text into the textarea.
+2. **Text Transformation**:
+   - Click the "Convert to Uppercase" button to change all text to uppercase.
+   - Click the "Convert to Lowercase" button to change all text to lowercase.
+3. **Clear Text**:
+   - Click the "Clear Text" button to empty the textarea.
+4. **Text Statistics**:
+   - Below the textarea, you will see:
+     - Number of words in the text.
+     - Number of characters (including spaces and special characters).
+     - Estimated reading time for the text.
+5. **Live Text Preview**:
+   - As you type or modify the text, the preview area updates in real-time.
 
-## Learn More
+## Reading Time Calculation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The estimated reading time is calculated based on the average adult reading speed of 200 words per minute (WPM).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+\[ \text{Reading Time (in minutes)} = \frac{\text{Number of words}}{200 \text{ WPM}} \]
 
-### Code Splitting
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To run this project locally, follow these steps:
 
-### Analyzing the Bundle Size
+1. Clone the repository:
+   ```bash
+   git clone 
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Navigate to the project directory:
+   ```bash
+   cd textutils
+   ```
 
-### Making a Progressive Web App
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-### Advanced Configuration
+5. Open your web browser and go to `http://localhost:3000` to view the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Technologies Used
 
-### Deployment
+- React.js
+- HTML/CSS
+- JavaScript
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing
 
-### `npm run build` fails to minify
+Contributions are welcome! If you have suggestions or improvements, please fork the repository and create a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
